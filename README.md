@@ -6,16 +6,21 @@
 [![React](https://img.shields.io/badge/React-18%2F19-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
 [![Vite](https://img.shields.io/badge/Vite-8.x-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
 [![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
+[![Live Portfolio](https://img.shields.io/badge/Live_Portfolio-GitHub_Pages-2ea44f?style=for-the-badge&logo=github)](https://ganesh-badar.github.io/portfolio/)
 
 A modern, full-stack personal developer portfolio and interactive AI assistant platform built by **Ganesh Badar**.
 
+🌐 **Live Portfolio:** [https://ganesh-badar.github.io/portfolio/](https://ganesh-badar.github.io/portfolio/)
+
+### 🚀 Featured Flagship Projects Showcased
+- **NexusTech — Full-Stack Enterprise E-Commerce Platform**
+  - [Live Demo](https://ganesh-badar.github.io/nexus-ecommerce-platform/) | [GitHub Repository](https://github.com/ganesh-badar/nexus-ecommerce-platform)
+  - Java 17, Spring Boot 3, Spring Data JPA, MySQL, React 18, Vite, Bootstrap 5, Docker
+- **HireScope AI — Enterprise AI Resume Screener & Real-Time ATS**
+  - [Live Demo](https://ganesh-badar.github.io/ai-resume-screener-ats/) | [GitHub Repository](https://github.com/ganesh-badar/ai-resume-screener-ats)
+  - Java 17, Spring Boot 3, React 18, MySQL, Server-Sent Events (SSE), OpenAI GPT-4o-mini, AWS S3
+
 Combines a **Spring Boot 3** REST API backend delivering resume data and an AI-powered conversational assistant with a high-performance **React + Vite** frontend featuring glassmorphism design, animated skill bars, dynamic project showcases, and responsive layouts.
-
----
-
-## 🌐 Live Deployments & Repository
-- **Permanent Live Demo (GitHub Pages)**: [https://ganesh-badar.github.io/portfolio/](https://ganesh-badar.github.io/portfolio/)
-- **GitHub Repository**: [https://github.com/ganesh-badar/portfolio](https://github.com/ganesh-badar/portfolio)
 
 ---
 

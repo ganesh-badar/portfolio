@@ -194,7 +194,7 @@ function About({ data }) {
           <div className="about-image-container">
             <div className="about-avatar">
               <img
-                src="/profile.jpg"
+                src={`${import.meta.env.BASE_URL}profile.jpg`}
                 alt={data?.personalInfo?.name || 'Ganesh Badar'}
                 className="about-avatar-img"
               />
@@ -257,11 +257,13 @@ function Skills({ data }) {
   }, [])
 
   const categoryIcons = {
-    'Core Languages': '💻',
-    'Backend / Frameworks': '⚙️',
-    'Database': '🗄️',
-    'Tools & IDEs': '🛠️',
-    'Other': '📦',
+    'Languages': '💻',
+    'Backend & Frameworks': '⚙️',
+    'Frontend & Web': '🎨',
+    'Databases & Cloud': '🗄️',
+    'Working Knowledge & Integrations': '⚡',
+    'Core Architectural Concepts': '🏗️',
+    'Tools & Developer Environment': '🛠️',
   }
 
   return (
@@ -368,13 +370,23 @@ function Projects({ data }) {
                 {(proj.liveUrl || proj.githubUrl) && (
                   <div className="project-actions">
                     {proj.liveUrl && (
-                      <a href={proj.liveUrl} target="_blank" rel="noopener noreferrer" className="project-btn project-btn-primary">
-                        🌐 Live Demo
+                      <a
+                        href={proj.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="project-btn project-btn-primary"
+                      >
+                        <span>🌐</span> Live Demo
                       </a>
                     )}
                     {proj.githubUrl && (
-                      <a href={proj.githubUrl} target="_blank" rel="noopener noreferrer" className="project-btn project-btn-outline">
-                        💻 GitHub
+                      <a
+                        href={proj.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="project-btn project-btn-outline"
+                      >
+                        <span>💻</span> GitHub Repository
                       </a>
                     )}
                   </div>
@@ -722,7 +734,7 @@ function getFallbackData() {
       location: "Pune, Maharashtra",
       title: "Java Backend Developer"
     },
-    professionalSummary: "Results-driven Java Backend Developer with a B.E. in Computer Science (CGPA 8.0, 2025). Proficient in Core Java, JDBC, Hibernate ORM, and MySQL, with hands-on experience building layered MVC applications and RESTful data-access layers. Comfortable with the full backend development cycle — from database schema design through ORM mapping, transaction management, and version-controlled deployment via Git. Eager to contribute clean, maintainable Java code in a collaborative engineering environment.",
+    professionalSummary: "Results-driven Full-Stack Java Developer with a B.E. in Computer Science (CGPA 8.0, 2025). Proficient in Java 17, Spring Boot 3, Spring Data JPA, Hibernate ORM, MySQL, and React 18. Hands-on experience architecting production-ready enterprise applications featuring asynchronous request-reply workflows, Server-Sent Events (SSE), ACID-compliant transactional checkout, and AI integrations (OpenAI GPT-4o-mini). Committed to writing clean, maintainable code with strong architectural fundamentals.",
     technicalSkills: {
       categories: [
         {
@@ -731,26 +743,27 @@ function getFallbackData() {
             { name: "Java (Java 17, Core & Advanced)", proficiency: 95 },
             { name: "JavaScript (ES6+)", proficiency: 85 },
             { name: "SQL", proficiency: 90 },
-            { name: "HTML5 & CSS3", proficiency: 90 }
+            { name: "HTML5 & CSS3", proficiency: 85 }
           ]
         },
         {
           category: "Backend & Frameworks",
           skills: [
-            { name: "Spring Boot 3", proficiency: 92 },
-            { name: "Spring Data JPA & Hibernate", proficiency: 90 },
-            { name: "RESTful APIs", proficiency: 92 },
+            { name: "Spring Boot 3", proficiency: 90 },
+            { name: "Spring Data JPA", proficiency: 90 },
+            { name: "Hibernate ORM", proficiency: 85 },
+            { name: "RESTful APIs", proficiency: 90 },
             { name: "Servlets & JDBC", proficiency: 85 },
-            { name: "Spring Security (Basic)", proficiency: 80 }
+            { name: "Spring Security (Basic)", proficiency: 75 }
           ]
         },
         {
           category: "Frontend & Web",
           skills: [
-            { name: "React 18 (Components, Hooks, State)", proficiency: 88 },
-            { name: "Vite", proficiency: 90 },
-            { name: "Bootstrap 5.3", proficiency: 88 },
-            { name: "JSON", proficiency: 92 }
+            { name: "React 18 (Hooks, State)", proficiency: 88 },
+            { name: "Vite", proficiency: 85 },
+            { name: "Bootstrap 5.3", proficiency: 85 },
+            { name: "JSON", proficiency: 90 }
           ]
         },
         {
@@ -758,17 +771,17 @@ function getFallbackData() {
           skills: [
             { name: "MySQL 8.0", proficiency: 90 },
             { name: "PostgreSQL (Familiar)", proficiency: 75 },
-            { name: "H2 In-Memory DB", proficiency: 85 },
-            { name: "AWS S3 (Object Storage - Working Knowledge)", proficiency: 80 }
+            { name: "H2 In-Memory DB", proficiency: 80 },
+            { name: "AWS S3 (Working Knowledge)", proficiency: 75 }
           ]
         },
         {
           category: "Working Knowledge & Integrations",
           skills: [
-            { name: "Server-Sent Events (SSE)", proficiency: 85 },
-            { name: "HikariCP Connection Pooling", proficiency: 88 },
-            { name: "Apache PDFBox 3.x", proficiency: 82 },
-            { name: "OpenAI API Integration", proficiency: 88 }
+            { name: "Server-Sent Events (SSE)", proficiency: 88 },
+            { name: "HikariCP Connection Pooling", proficiency: 85 },
+            { name: "Apache PDFBox 3.x", proficiency: 85 },
+            { name: "OpenAI API Integration", proficiency: 85 }
           ]
         },
         {
@@ -776,20 +789,20 @@ function getFallbackData() {
           skills: [
             { name: "Concurrency & ThreadPoolTaskExecutor", proficiency: 88 },
             { name: "Asynchronous Request-Reply (HTTP 202)", proficiency: 90 },
-            { name: "Transaction Management (@Transactional)", proficiency: 88 },
+            { name: "Transaction Management (@Transactional)", proficiency: 90 },
             { name: "OOP Principles & MVC Architecture", proficiency: 92 }
           ]
         },
         {
           category: "Tools & Developer Environment",
           skills: [
-            { name: "Git & GitHub", proficiency: 92 },
+            { name: "Git & GitHub", proficiency: 90 },
             { name: "Maven", proficiency: 88 },
-            { name: "Postman", proficiency: 90 },
-            { name: "VS Code & Eclipse", proficiency: 90 },
-            { name: "Cursor (AI-assisted workflows)", proficiency: 92 },
-            { name: "Docker (Basic) & Apache Tomcat", proficiency: 80 },
-            { name: "Linux (Basic)", proficiency: 78 }
+            { name: "Postman", proficiency: 88 },
+            { name: "VS Code & Eclipse", proficiency: 85 },
+            { name: "Cursor (AI-assisted workflows)", proficiency: 85 },
+            { name: "Apache Tomcat & Docker (Basic)", proficiency: 80 },
+            { name: "Linux (Basic)", proficiency: 75 }
           ]
         }
       ]
@@ -810,7 +823,7 @@ function getFallbackData() {
       {
         name: "NexusTech — Full-Stack Enterprise E-Commerce Platform",
         techStack: "Java 17 · Spring Boot 3 · Spring Data JPA · MySQL · React 18 · Vite · Bootstrap 5 · Docker",
-        icon: "🛍️",
+        icon: "🛒",
         liveUrl: "https://ganesh-badar.github.io/nexus-ecommerce-platform/",
         githubUrl: "https://github.com/ganesh-badar/nexus-ecommerce-platform",
         highlights: [
@@ -824,7 +837,7 @@ function getFallbackData() {
       {
         name: "HireScope AI — Enterprise AI Resume Screener & Real-Time ATS",
         techStack: "Java 17 · Spring Boot 3 · React 18 · MySQL · SSE · OpenAI · AWS S3",
-        icon: "⚡",
+        icon: "🤖",
         liveUrl: "https://ganesh-badar.github.io/ai-resume-screener-ats/",
         githubUrl: "https://github.com/ganesh-badar/ai-resume-screener-ats",
         highlights: [
