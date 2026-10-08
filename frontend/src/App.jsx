@@ -39,7 +39,7 @@ function Navbar() {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-content">
         <div className="navbar-logo" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-          <img src="/profile.jpg" alt="Ganesh Badar" className="navbar-avatar-img" />
+          <img src={`${import.meta.env.BASE_URL}profile.jpg`} alt="Ganesh Badar" className="navbar-avatar-img" />
           <span className="navbar-logo-text">GB<span>.dev</span></span>
         </div>
         <ul className={`navbar-links ${menuOpen ? 'open' : ''}`}>
@@ -125,7 +125,7 @@ function Hero({ data }) {
           <div className="hero-avatar-glow"></div>
           <div className="hero-avatar-frame">
             <img
-              src="/profile.jpg"
+              src={`${import.meta.env.BASE_URL}profile.jpg`}
               alt={data?.personalInfo?.name || 'Ganesh Badar'}
               className="hero-avatar-img"
             />
