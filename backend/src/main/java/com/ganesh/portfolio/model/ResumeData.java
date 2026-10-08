@@ -113,6 +113,8 @@ public class ResumeData {
         private String techStack;
         private List<String> highlights;
         private String icon;
+        private String liveUrl;
+        private String githubUrl;
 
         public String getName() { return name; }
         public void setName(String name) { this.name = name; }
@@ -122,6 +124,10 @@ public class ResumeData {
         public void setHighlights(List<String> highlights) { this.highlights = highlights; }
         public String getIcon() { return icon; }
         public void setIcon(String icon) { this.icon = icon; }
+        public String getLiveUrl() { return liveUrl; }
+        public void setLiveUrl(String liveUrl) { this.liveUrl = liveUrl; }
+        public String getGithubUrl() { return githubUrl; }
+        public void setGithubUrl(String githubUrl) { this.githubUrl = githubUrl; }
     }
 
     public static class Education {

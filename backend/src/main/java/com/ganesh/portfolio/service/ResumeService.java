@@ -37,35 +37,51 @@ public class ResumeService {
         // Technical Skills
         TechnicalSkills skills = new TechnicalSkills();
         skills.setCategories(Arrays.asList(
-            createCategory("Core Languages", Arrays.asList(
-                createSkill("Java (Core Java, OOP)", 90),
-                createSkill("Collections Framework", 85),
-                createSkill("Exception Handling", 85),
-                createSkill("SQL", 80)
+            createCategory("Languages", Arrays.asList(
+                createSkill("Java (Java 17, Core & Advanced)", 95),
+                createSkill("JavaScript (ES6+)", 85),
+                createSkill("SQL", 90),
+                createSkill("HTML5 & CSS3", 90)
             )),
-            createCategory("Backend / Frameworks", Arrays.asList(
-                createSkill("JDBC", 85),
-                createSkill("Hibernate ORM", 80),
-                createSkill("Servlets & JSP", 75),
-                createSkill("Spring Framework", 70),
-                createSkill("Spring Boot", 65)
+            createCategory("Backend & Frameworks", Arrays.asList(
+                createSkill("Spring Boot 3", 92),
+                createSkill("Spring Data JPA & Hibernate", 90),
+                createSkill("RESTful APIs", 92),
+                createSkill("Servlets & JDBC", 85),
+                createSkill("Spring Security (Basic)", 80)
             )),
-            createCategory("Database", Arrays.asList(
-                createSkill("MySQL", 85),
-                createSkill("Schema Design", 80),
-                createSkill("JOINs & Aggregates", 80),
-                createSkill("Stored Procedures", 70)
+            createCategory("Frontend & Web", Arrays.asList(
+                createSkill("React 18 (Components, Hooks)", 88),
+                createSkill("Vite", 90),
+                createSkill("Bootstrap 5.3", 88),
+                createSkill("JSON", 92)
             )),
-            createCategory("Tools & IDEs", Arrays.asList(
-                createSkill("IntelliJ IDEA", 85),
-                createSkill("Eclipse", 80),
-                createSkill("VS Code", 80),
-                createSkill("Git & GitHub", 85)
+            createCategory("Databases & Cloud", Arrays.asList(
+                createSkill("MySQL 8.0", 90),
+                createSkill("PostgreSQL (Familiar)", 75),
+                createSkill("H2 In-Memory DB", 85),
+                createSkill("AWS S3 (Object Storage)", 80)
             )),
-            createCategory("Other", Arrays.asList(
-                createSkill("Microsoft Excel", 70),
-                createSkill("Linux / Unix Commands", 65),
-                createSkill("HTML / CSS / JavaScript", 75)
+            createCategory("Working Knowledge & Integrations", Arrays.asList(
+                createSkill("Server-Sent Events (SSE)", 85),
+                createSkill("HikariCP Connection Pooling", 88),
+                createSkill("Apache PDFBox 3.x", 82),
+                createSkill("OpenAI API (GPT-4o-mini)", 88)
+            )),
+            createCategory("Core Architectural Concepts", Arrays.asList(
+                createSkill("Concurrency & ThreadPoolTaskExecutor", 88),
+                createSkill("Asynchronous Request-Reply (HTTP 202)", 90),
+                createSkill("Transaction Management (@Transactional)", 88),
+                createSkill("OOP Principles & MVC Architecture", 92)
+            )),
+            createCategory("Tools & Developer Environment", Arrays.asList(
+                createSkill("Git & GitHub", 92),
+                createSkill("Maven", 88),
+                createSkill("Postman", 90),
+                createSkill("VS Code & Eclipse", 90),
+                createSkill("Cursor (AI-assisted workflows)", 92),
+                createSkill("Docker (Basic) & Apache Tomcat", 80),
+                createSkill("Linux (Basic)", 78)
             ))
         ));
         resume.setTechnicalSkills(skills);
@@ -84,25 +100,30 @@ public class ResumeService {
 
         // Projects
         Project proj1 = new Project();
-        proj1.setName("Student Management System");
-        proj1.setTechStack("Java · JDBC · MySQL · MVC Architecture");
-        proj1.setIcon("🎓");
+        proj1.setName("NexusTech — Full-Stack Enterprise E-Commerce Platform");
+        proj1.setTechStack("Java 17 · Spring Boot 3 · Spring Data JPA · MySQL · React 18 · Vite · Bootstrap 5 · Docker");
+        proj1.setIcon("🛍️");
+        proj1.setLiveUrl("https://ganesh-badar.github.io/nexus-ecommerce-platform/");
+        proj1.setGithubUrl("https://github.com/ganesh-badar/nexus-ecommerce-platform");
         proj1.setHighlights(Arrays.asList(
-            "Designed and built a console-based CRUD application managing student records (Add, Update, Delete, View) on a live MySQL database.",
-            "Applied three-layer MVC architecture (Model, DAO, Controller) to separate business logic, data access, and presentation concerns.",
-            "Wrote parameterised JDBC PreparedStatements for all DML operations, eliminating SQL-injection vulnerabilities.",
-            "Created reusable entity classes and a centralised DB-connection utility, reducing boilerplate across DAO implementations."
+            "Architected and deployed an enterprise-grade full-stack e-commerce application supporting dual-role workflows (Customer Storefront and Merchant Operations).",
+            "Engineered ACID-compliant transactional checkout with multi-channel payment integration (Prepaid UPI/QR, Credit/Debit Cards, Net Banking, and COD) with atomic inventory management.",
+            "Built real-time courier tracking stepper with estimated arrival logic and a merchant back-office portal with stock alerts and fulfillment controls.",
+            "Resolved Hibernate N+1 query bottlenecks by optimizing JPA entities with @EntityGraph, reducing database query latency by over 60%.",
+            "Fully containerized and deployed live on the cloud, with complete source code, architectural guides, and API documentation published on GitHub."
         ));
 
         Project proj2 = new Project();
-        proj2.setName("Hibernate ORM & HQL Application");
-        proj2.setTechStack("Java · Hibernate ORM · HQL · MySQL · Git");
+        proj2.setName("HireScope AI — Enterprise AI Resume Screener & Real-Time ATS");
+        proj2.setTechStack("Java 17 · Spring Boot 3 · React 18 · MySQL · SSE · OpenAI · AWS S3");
         proj2.setIcon("⚡");
+        proj2.setLiveUrl("https://ganesh-badar.github.io/ai-resume-screener-ats/");
+        proj2.setGithubUrl("https://github.com/ganesh-badar/ai-resume-screener-ats");
         proj2.setHighlights(Arrays.asList(
-            "Built a Java application using Hibernate ORM to replace raw JDBC, reducing data-access code by ~40%.",
-            "Wrote HQL queries for full CRUD operations; configured entity mappings via XML with proper session factory lifecycle management.",
-            "Implemented session and transaction management (open / commit / rollback) to maintain database integrity under concurrent operations.",
-            "Managed codebase with Git — feature branches, meaningful commit messages, and structured README following real-world practices."
+            "Architected a full-stack, asynchronous applicant tracking system leveraging Spring Boot 3 and React 18 to evaluate candidate resumes against technical requisitions in real time.",
+            "Eliminated Tomcat servlet thread starvation and 504 gateway timeouts by implementing the Asynchronous Request-Reply Pattern (HTTP 202 Accepted), reducing initial API response latency to < 50ms.",
+            "Integrated Server-Sent Events (SSE) with a thread-safe emitter registry (ConcurrentHashMap) to stream live multi-stage extraction and LLM scoring updates without the protocol overhead of WebSockets.",
+            "Configured a bounded ThreadPoolTaskExecutor with CallerRunsPolicy for graceful backpressure, and engineered automated document text parsing via Apache PDFBox 3.x feeding into OpenAI GPT-4o-mini with strict JSON schema validation."
         ));
         resume.setProjects(Arrays.asList(proj1, proj2));
 

@@ -13,6 +13,12 @@ Combines a **Spring Boot 3** REST API backend delivering resume data and an AI-p
 
 ---
 
+## 🌐 Live Deployments & Repository
+- **Permanent Live Demo (GitHub Pages)**: [https://ganesh-badar.github.io/portfolio/](https://ganesh-badar.github.io/portfolio/)
+- **GitHub Repository**: [https://github.com/ganesh-badar/portfolio](https://github.com/ganesh-badar/portfolio)
+
+---
+
 ## 🏛️ System Architecture
 
 ```mermaid

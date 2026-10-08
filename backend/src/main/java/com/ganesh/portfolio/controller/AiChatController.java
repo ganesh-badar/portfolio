@@ -32,11 +32,12 @@ public class AiChatController {
 
         if (q.contains("skill") || q.contains("technology") || q.contains("tech stack") || q.contains("know")) {
             return "🛠️ Ganesh is proficient in:\n\n" +
-                   "**Core Languages:** Java (Core Java, OOP, Collections, Exception Handling), SQL\n\n" +
-                   "**Backend/Frameworks:** JDBC, Hibernate ORM (HQL, entity mapping, session & transaction management), Servlets, JSP, Spring Framework\n\n" +
-                   "**Database:** MySQL — schema design, JOINs, GROUP BY, aggregates, stored procedures\n\n" +
-                   "**Tools:** IntelliJ IDEA, Eclipse, VS Code, Git & GitHub\n\n" +
-                   "He's constantly learning and expanding his skill set!";
+                   "**Languages:** Java (Java 17, Core & Advanced), JavaScript (ES6+), SQL, HTML5, CSS3\n\n" +
+                   "**Backend & Frameworks:** Spring Boot 3, Spring Data JPA, Hibernate ORM, RESTful APIs, Servlets, JDBC, Spring Security\n\n" +
+                   "**Frontend & Web:** React 18 (Components, Hooks, State), Vite, Bootstrap 5.3, JSON\n\n" +
+                   "**Databases & Cloud:** MySQL 8.0, PostgreSQL, H2, AWS S3 (Object Storage)\n\n" +
+                   "**Architecture & Integrations:** Server-Sent Events (SSE), Concurrency & Thread Pooling (ThreadPoolTaskExecutor), HikariCP, Apache PDFBox, OpenAI API (GPT-4o-mini)\n\n" +
+                   "**Tools:** Git, GitHub, Maven, Postman, VS Code, Eclipse, Cursor, Docker, Apache Tomcat";
         }
 
         if (q.contains("experience") || q.contains("work") || q.contains("intern") || q.contains("job")) {
@@ -49,14 +50,16 @@ public class AiChatController {
         }
 
         if (q.contains("project") || q.contains("built") || q.contains("develop")) {
-            return "🚀 **Notable Projects:**\n\n" +
-                   "**1. Student Management System** (Java · JDBC · MySQL · MVC)\n" +
-                   "• Console-based CRUD app with three-layer MVC architecture\n" +
-                   "• Used PreparedStatements to eliminate SQL-injection vulnerabilities\n\n" +
-                   "**2. Hibernate ORM & HQL Application** (Java · Hibernate · MySQL · Git)\n" +
-                   "• Replaced raw JDBC with Hibernate ORM, reducing data-access code by ~40%\n" +
-                   "• Implemented proper session and transaction management\n\n" +
-                   "Both projects demonstrate strong backend architecture skills!";
+            return "🚀 **Featured Enterprise Projects:**\n\n" +
+                   "**1. NexusTech — Full-Stack Enterprise E-Commerce Platform**\n" +
+                   "• Tech Stack: Java 17, Spring Boot 3, Spring Data JPA, MySQL, React 18, Vite, Bootstrap 5, Docker\n" +
+                   "• Dual-role customer storefront and merchant back-office with ACID checkout, multi-channel payment, courier tracking, and @EntityGraph query optimization (60%+ latency reduction).\n" +
+                   "• Live Demo: https://ganesh-badar.github.io/nexus-ecommerce-platform/\n\n" +
+                   "**2. HireScope AI — Enterprise AI Resume Screener & Real-Time ATS**\n" +
+                   "• Tech Stack: Java 17, Spring Boot 3, React 18, MySQL, SSE, OpenAI GPT-4o-mini, AWS S3\n" +
+                   "• Asynchronous Request-Reply (HTTP 202) eliminating thread starvation, bounded ThreadPoolTaskExecutor with CallerRunsPolicy, Apache PDFBox extraction, and real-time Server-Sent Events (SSE) streaming.\n" +
+                   "• Live Demo: https://ganesh-badar.github.io/ai-resume-screener-ats/\n\n" +
+                   "Both projects feature comprehensive documentation, live deployments, and full GitHub source code!";
         }
 
         if (q.contains("education") || q.contains("degree") || q.contains("college") || q.contains("university") || q.contains("study")) {

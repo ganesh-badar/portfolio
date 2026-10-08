@@ -365,6 +365,20 @@ function Projects({ data }) {
                     <span key={tIdx} className="project-tag">{tag}</span>
                   ))}
                 </div>
+                {(proj.liveUrl || proj.githubUrl) && (
+                  <div className="project-actions">
+                    {proj.liveUrl && (
+                      <a href={proj.liveUrl} target="_blank" rel="noopener noreferrer" className="project-btn project-btn-primary">
+                        🌐 Live Demo
+                      </a>
+                    )}
+                    {proj.githubUrl && (
+                      <a href={proj.githubUrl} target="_blank" rel="noopener noreferrer" className="project-btn project-btn-outline">
+                        💻 GitHub
+                      </a>
+                    )}
+                  </div>
+                )}
               </div>
             </div>
           ))}
@@ -712,48 +726,70 @@ function getFallbackData() {
     technicalSkills: {
       categories: [
         {
-          category: "Core Languages",
+          category: "Languages",
           skills: [
-            { name: "Java (Core Java, OOP)", proficiency: 90 },
-            { name: "Collections Framework", proficiency: 85 },
-            { name: "Exception Handling", proficiency: 85 },
-            { name: "SQL", proficiency: 80 }
+            { name: "Java (Java 17, Core & Advanced)", proficiency: 95 },
+            { name: "JavaScript (ES6+)", proficiency: 85 },
+            { name: "SQL", proficiency: 90 },
+            { name: "HTML5 & CSS3", proficiency: 90 }
           ]
         },
         {
-          category: "Backend / Frameworks",
+          category: "Backend & Frameworks",
           skills: [
-            { name: "JDBC", proficiency: 85 },
-            { name: "Hibernate ORM", proficiency: 80 },
-            { name: "Servlets & JSP", proficiency: 75 },
-            { name: "Spring Framework", proficiency: 70 },
-            { name: "Spring Boot", proficiency: 65 }
+            { name: "Spring Boot 3", proficiency: 92 },
+            { name: "Spring Data JPA & Hibernate", proficiency: 90 },
+            { name: "RESTful APIs", proficiency: 92 },
+            { name: "Servlets & JDBC", proficiency: 85 },
+            { name: "Spring Security (Basic)", proficiency: 80 }
           ]
         },
         {
-          category: "Database",
+          category: "Frontend & Web",
           skills: [
-            { name: "MySQL", proficiency: 85 },
-            { name: "Schema Design", proficiency: 80 },
-            { name: "JOINs & Aggregates", proficiency: 80 },
-            { name: "Stored Procedures", proficiency: 70 }
+            { name: "React 18 (Components, Hooks, State)", proficiency: 88 },
+            { name: "Vite", proficiency: 90 },
+            { name: "Bootstrap 5.3", proficiency: 88 },
+            { name: "JSON", proficiency: 92 }
           ]
         },
         {
-          category: "Tools & IDEs",
+          category: "Databases & Cloud",
           skills: [
-            { name: "IntelliJ IDEA", proficiency: 85 },
-            { name: "Eclipse", proficiency: 80 },
-            { name: "VS Code", proficiency: 80 },
-            { name: "Git & GitHub", proficiency: 85 }
+            { name: "MySQL 8.0", proficiency: 90 },
+            { name: "PostgreSQL (Familiar)", proficiency: 75 },
+            { name: "H2 In-Memory DB", proficiency: 85 },
+            { name: "AWS S3 (Object Storage - Working Knowledge)", proficiency: 80 }
           ]
         },
         {
-          category: "Other",
+          category: "Working Knowledge & Integrations",
           skills: [
-            { name: "Microsoft Excel", proficiency: 70 },
-            { name: "Linux / Unix Commands", proficiency: 65 },
-            { name: "HTML / CSS / JavaScript", proficiency: 75 }
+            { name: "Server-Sent Events (SSE)", proficiency: 85 },
+            { name: "HikariCP Connection Pooling", proficiency: 88 },
+            { name: "Apache PDFBox 3.x", proficiency: 82 },
+            { name: "OpenAI API Integration", proficiency: 88 }
+          ]
+        },
+        {
+          category: "Core Architectural Concepts",
+          skills: [
+            { name: "Concurrency & ThreadPoolTaskExecutor", proficiency: 88 },
+            { name: "Asynchronous Request-Reply (HTTP 202)", proficiency: 90 },
+            { name: "Transaction Management (@Transactional)", proficiency: 88 },
+            { name: "OOP Principles & MVC Architecture", proficiency: 92 }
+          ]
+        },
+        {
+          category: "Tools & Developer Environment",
+          skills: [
+            { name: "Git & GitHub", proficiency: 92 },
+            { name: "Maven", proficiency: 88 },
+            { name: "Postman", proficiency: 90 },
+            { name: "VS Code & Eclipse", proficiency: 90 },
+            { name: "Cursor (AI-assisted workflows)", proficiency: 92 },
+            { name: "Docker (Basic) & Apache Tomcat", proficiency: 80 },
+            { name: "Linux (Basic)", proficiency: 78 }
           ]
         }
       ]
@@ -772,25 +808,30 @@ function getFallbackData() {
     ],
     projects: [
       {
-        name: "Student Management System",
-        techStack: "Java · JDBC · MySQL · MVC Architecture",
-        icon: "🎓",
+        name: "NexusTech — Full-Stack Enterprise E-Commerce Platform",
+        techStack: "Java 17 · Spring Boot 3 · Spring Data JPA · MySQL · React 18 · Vite · Bootstrap 5 · Docker",
+        icon: "🛍️",
+        liveUrl: "https://ganesh-badar.github.io/nexus-ecommerce-platform/",
+        githubUrl: "https://github.com/ganesh-badar/nexus-ecommerce-platform",
         highlights: [
-          "Designed and built a console-based CRUD application managing student records on a live MySQL database.",
-          "Applied three-layer MVC architecture to separate business logic, data access, and presentation concerns.",
-          "Wrote parameterised JDBC PreparedStatements for all DML operations, eliminating SQL-injection vulnerabilities.",
-          "Created reusable entity classes and a centralised DB-connection utility, reducing boilerplate across DAO implementations."
+          "Architected and deployed an enterprise-grade full-stack e-commerce application supporting dual-role workflows (Customer Storefront and Merchant Operations).",
+          "Engineered ACID-compliant transactional checkout with multi-channel payment integration (Prepaid UPI/QR, Credit/Debit Cards, Net Banking, and COD) with atomic inventory management.",
+          "Built real-time courier tracking stepper with estimated arrival logic and a merchant back-office portal with stock alerts and fulfillment controls.",
+          "Resolved Hibernate N+1 query bottlenecks by optimizing JPA entities with @EntityGraph, reducing database query latency by over 60%.",
+          "Fully containerized and deployed live on the cloud, with complete source code, architectural guides, and API documentation published on GitHub."
         ]
       },
       {
-        name: "Hibernate ORM & HQL Application",
-        techStack: "Java · Hibernate ORM · HQL · MySQL · Git",
+        name: "HireScope AI — Enterprise AI Resume Screener & Real-Time ATS",
+        techStack: "Java 17 · Spring Boot 3 · React 18 · MySQL · SSE · OpenAI · AWS S3",
         icon: "⚡",
+        liveUrl: "https://ganesh-badar.github.io/ai-resume-screener-ats/",
+        githubUrl: "https://github.com/ganesh-badar/ai-resume-screener-ats",
         highlights: [
-          "Built a Java application using Hibernate ORM to replace raw JDBC, reducing data-access code by ~40%.",
-          "Wrote HQL queries for full CRUD operations; configured entity mappings via XML with proper session factory lifecycle management.",
-          "Implemented session and transaction management (open / commit / rollback) to maintain database integrity.",
-          "Managed codebase with Git — feature branches, meaningful commit messages, and structured README."
+          "Architected a full-stack, asynchronous applicant tracking system leveraging Spring Boot 3 and React 18 to evaluate candidate resumes against technical requisitions in real time.",
+          "Eliminated Tomcat servlet thread starvation and 504 gateway timeouts by implementing the Asynchronous Request-Reply Pattern (HTTP 202 Accepted), reducing initial API response latency to < 50ms.",
+          "Integrated Server-Sent Events (SSE) with a thread-safe emitter registry (ConcurrentHashMap) to stream live multi-stage extraction and LLM scoring updates without the protocol overhead of WebSockets.",
+          "Configured a bounded ThreadPoolTaskExecutor with CallerRunsPolicy for graceful backpressure, and engineered automated document text parsing via Apache PDFBox 3.x feeding into OpenAI GPT-4o-mini with strict JSON schema validation."
         ]
       }
     ],
