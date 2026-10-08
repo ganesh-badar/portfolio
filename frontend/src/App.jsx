@@ -480,6 +480,125 @@ function Strengths({ data }) {
   )
 }
 
+// ===== Client-Side Intelligent Portfolio Assistant (Offline Fallback) =====
+function generateLocalAiResponse(question) {
+  const q = question.toLowerCase();
+
+  if (q.includes("skill") || q.includes("technology") || q.includes("tech stack") || q.includes("know") || q.includes("language") || q.includes("framework")) {
+    return "🛠️ Ganesh's Technical Skills Matrix:\n\n" +
+      "• Languages: Java (Java 17, Core & Advanced Java), JavaScript (ES6+), SQL, HTML5, CSS3\n\n" +
+      "• Backend & Frameworks: Spring Boot 3, Spring Data JPA, Hibernate ORM, RESTful APIs, Servlets, JDBC, Spring Security (Basic)\n\n" +
+      "• Frontend & Web: React 18 (Components, Hooks, State), Vite, Bootstrap 5.3, JSON\n\n" +
+      "• Databases & Cloud: MySQL 8.0, PostgreSQL (Familiar), H2 In-Memory DB, AWS S3 (Working Knowledge)\n\n" +
+      "• Integrations: Server-Sent Events (SSE), HikariCP, Apache PDFBox 3.x, OpenAI API Integration\n\n" +
+      "• Core Architectural Concepts: Concurrency (ThreadPoolTaskExecutor), Asynchronous Request-Reply (HTTP 202), Transaction Management (@Transactional), OOP Principles, MVC Architecture\n\n" +
+      "• Tools & Developer Environment: Git, GitHub, Maven, Postman, VS Code, Eclipse, Cursor (AI-assisted workflows), Apache Tomcat, Docker (Basic), Linux (Basic)";
+  }
+
+  if (q.includes("project") || q.includes("built") || q.includes("develop") || q.includes("ecommerce") || q.includes("ats") || q.includes("app") || q.includes("nexustech") || q.includes("hirescope")) {
+    return "🚀 Flagship Production Projects:\n\n" +
+      "1. NexusTech — Full-Stack Enterprise E-Commerce Platform\n" +
+      "• Tech: Java 17, Spring Boot 3, Spring Data JPA, MySQL, React 18, Vite, Bootstrap 5, Docker\n" +
+      "• Dual-role customer storefront & merchant back-office portal\n" +
+      "• ACID-compliant transactional checkout, atomic inventory deductions & multi-channel payments (Prepaid UPI/QR, Cards, Net Banking, COD)\n" +
+      "• Real-time courier tracking stepper with estimated arrival logic; Hibernate N+1 query bottlenecks resolved via @EntityGraph (>60% query latency reduction)\n" +
+      "• 🌐 Live Demo: https://ganesh-badar.github.io/nexus-ecommerce-platform/\n" +
+      "• 💻 GitHub: https://github.com/ganesh-badar/nexus-ecommerce-platform\n\n" +
+      "2. HireScope AI — Enterprise AI Resume Screener & Real-Time ATS\n" +
+      "• Tech: Java 17, Spring Boot 3, React 18, MySQL, SSE, OpenAI GPT-4o-mini, AWS S3\n" +
+      "• Asynchronous Request-Reply Pattern (HTTP 202) reducing API response latency to <50ms\n" +
+      "• Live multi-stage streaming via Server-Sent Events (SSE) with thread-safe ConcurrentHashMap emitter registry\n" +
+      "• Bounded ThreadPoolTaskExecutor with CallerRunsPolicy backpressure & Apache PDFBox + GPT-4o-mini parsing\n" +
+      "• 🌐 Live Demo: https://ganesh-badar.github.io/ai-resume-screener-ats/\n" +
+      "• 💻 GitHub: https://github.com/ganesh-badar/ai-resume-screener-ats";
+  }
+
+  if (q.includes("experience") || q.includes("intern") || q.includes("job") || q.includes("prodigy") || q.includes("work")) {
+    return "💼 Work Experience:\n\n" +
+      "Web Development Intern — Prodigy InfoTech (Dec 2024 – Jan 2025)\n\n" +
+      "• Developed and delivered frontend components (HTML, CSS, JavaScript), improving UI responsiveness and cross-browser consistency.\n" +
+      "• Followed the complete project lifecycle — requirements gathering, implementation, and review.\n" +
+      "• Collaborated with senior developers to debug and refine UI behaviour, reducing reported interface issues on tested pages.";
+  }
+
+  if (q.includes("education") || q.includes("degree") || q.includes("college") || q.includes("university") || q.includes("study") || q.includes("cgpa")) {
+    return "🎓 Education Details:\n\n" +
+      "• B.E. in Computer Science & Engineering\n" +
+      "  Anuradha Engineering College, Chikhli | CGPA: 8.0/10 (2021–2025)\n\n" +
+      "• HSC (12th)\n" +
+      "  Maharashtra State Board | 87.50% (2021)\n\n" +
+      "• SSC (10th)\n" +
+      "  Maharashtra State Board | 78.80% (2019)";
+  }
+
+  if (q.includes("certif") || q.includes("course") || q.includes("dsa") || q.includes("udemy")) {
+    return "📜 Certifications:\n\n" +
+      "• Complete Core Java + DSA — Udemy\n" +
+      "• Web Design: Beginner to Advanced — Udemy\n" +
+      "• Learn HTML: Basic to Advanced — Udemy";
+  }
+
+  if (q.includes("contact") || q.includes("reach") || q.includes("email") || q.includes("phone") || q.includes("hire") || q.includes("linkedin") || q.includes("github")) {
+    return "📬 Get in Touch with Ganesh:\n\n" +
+      "• 📱 Phone: +91-9022201351\n" +
+      "• 📧 Email: ganeshbadar01@gmail.com\n" +
+      "• 🔗 LinkedIn: https://www.linkedin.com/in/ganesh-badar2004\n" +
+      "• 💻 GitHub: https://github.com/ganesh-badar/\n" +
+      "• 📍 Location: Pune, Maharashtra\n\n" +
+      "Ganesh is actively open to full-time developer opportunities and collaborations!";
+  }
+
+  if (q.includes("strength") || q.includes("quality") || q.includes("why hire")) {
+    return "💪 Key Strengths:\n\n" +
+      "• Strong verbal & written English communication\n" +
+      "• Follows SOPs diligently in process-driven engineering environments\n" +
+      "• Analytical mindset with keen attention to detail & clean architecture\n" +
+      "• Quick learner with rapid ramp-up in Spring Boot, React, and cloud integrations\n" +
+      "• Collaborative team player with a growth-oriented mindset\n" +
+      "• Available for 24/7 rotational shifts including nights";
+  }
+
+  if (q.includes("who") || q.includes("about") || q.includes("tell me") || q.includes("intro") || q.includes("summary") || q.includes("ganesh")) {
+    return "👋 About Ganesh Badar:\n\n" +
+      "Ganesh is a results-driven Full-Stack Java Developer based in Pune, Maharashtra. He holds a B.E. in Computer Science (CGPA 8.0, 2025) and specializes in Java 17, Spring Boot 3, Spring Data JPA, MySQL, and React 18.\n\n" +
+      "He has architected two production-grade flagship applications: NexusTech (enterprise e-commerce) and HireScope AI (real-time ATS with SSE & OpenAI).\n\n" +
+      "Feel free to ask about his skills, projects, or how to contact him!";
+  }
+
+  return "👋 Thanks for asking! I'm Ganesh's AI portfolio assistant.\n\n" +
+    "You can ask me questions like:\n" +
+    "• 'Tell me about his projects' — NexusTech & HireScope AI\n" +
+    "• 'What are his skills?' — Java, Spring Boot, React, MySQL, SSE\n" +
+    "• 'Work experience?' — Internship at Prodigy InfoTech\n" +
+    "• 'Education?' — B.E. Computer Science (CGPA 8.0)\n" +
+    "• 'How to contact him?' — Email, LinkedIn, Phone";
+}
+
+function FormattedMessage({ text }) {
+  const urlRegex = /(https?:\/\/[^\s]+)/g;
+  const parts = text.split(urlRegex);
+  return (
+    <span>
+      {parts.map((part, i) => {
+        if (urlRegex.test(part)) {
+          return (
+            <a
+              key={i}
+              href={part}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: '#00d2ff', textDecoration: 'underline', wordBreak: 'break-all' }}
+            >
+              {part}
+            </a>
+          );
+        }
+        return part;
+      })}
+    </span>
+  );
+}
+
 // ===== AI Chat Component =====
 function AiChat() {
   const [messages, setMessages] = useState([
@@ -506,18 +625,22 @@ function AiChat() {
     setLoading(true)
 
     try {
+      const controller = new AbortController()
+      const timeoutId = setTimeout(() => controller.abort(), 2000)
       const res = await fetch(`${API_BASE}/chat`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: text }),
+        signal: controller.signal,
       })
+      clearTimeout(timeoutId)
+      if (!res.ok) throw new Error('API unavailable')
       const data = await res.json()
       setMessages(prev => [...prev, { role: 'bot', content: data.response }])
     } catch {
-      setMessages(prev => [...prev, {
-        role: 'bot',
-        content: "⚠️ I'm having trouble connecting to the server. Please make sure the backend is running on port 8080."
-      }])
+      // Seamless offline fallback: Use built-in client intelligence trained on Ganesh's profile
+      const fallbackResponse = generateLocalAiResponse(text)
+      setMessages(prev => [...prev, { role: 'bot', content: fallbackResponse }])
     } finally {
       setLoading(false)
     }
@@ -536,12 +659,12 @@ function AiChat() {
       <div className="container">
         <div className="section-header">
           <h2 className="section-title">🤖 AI Assistant</h2>
-          <p className="section-subtitle">Chat with AI to learn more about my profile — powered by Spring AI</p>
+          <p className="section-subtitle">Chat with AI to learn more about my profile — trained on Ganesh's resume & projects</p>
         </div>
         <div className="chat-container">
           <div className="chat-window">
             <div className="chat-header">
-              <img src="/profile.jpg" alt="Ganesh AI" className="chat-avatar-img" />
+              <img src={`${import.meta.env.BASE_URL}profile.jpg`} alt="Ganesh AI" className="chat-avatar-img" />
               <div className="chat-header-details">
                 <div className="chat-header-main">
                   <div className="chat-header-dot"></div>
@@ -552,8 +675,8 @@ function AiChat() {
             </div>
             <div className="chat-messages">
               {messages.map((msg, idx) => (
-                <div key={idx} className={`chat-message ${msg.role}`}>
-                  {msg.content}
+                <div key={idx} className={`chat-message ${msg.role}`} style={{ whiteSpace: 'pre-line' }}>
+                  <FormattedMessage text={msg.content} />
                 </div>
               ))}
               {loading && (
@@ -631,8 +754,8 @@ function Footer() {
       <div className="container">
         <div className="footer-content">
           <div className="footer-socials">
-            <a href="https://linkedin.com/in/ganeshbadar" target="_blank" rel="noopener noreferrer" className="footer-social-link" title="LinkedIn">in</a>
-            <a href="https://github.com/ganeshbadar" target="_blank" rel="noopener noreferrer" className="footer-social-link" title="GitHub">GH</a>
+            <a href="https://www.linkedin.com/in/ganesh-badar2004" target="_blank" rel="noopener noreferrer" className="footer-social-link" title="LinkedIn">in</a>
+            <a href="https://github.com/ganesh-badar/" target="_blank" rel="noopener noreferrer" className="footer-social-link" title="GitHub">GH</a>
             <a href="mailto:ganeshbadar01@gmail.com" className="footer-social-link" title="Email">@</a>
           </div>
           <p className="footer-text">
@@ -729,8 +852,8 @@ function getFallbackData() {
       name: "Ganesh Badar",
       phone: "+91-9022201351",
       email: "ganeshbadar01@gmail.com",
-      linkedin: "https://linkedin.com/in/ganeshbadar",
-      github: "https://github.com/ganeshbadar",
+      linkedin: "https://www.linkedin.com/in/ganesh-badar2004",
+      github: "https://github.com/ganesh-badar/",
       location: "Pune, Maharashtra",
       title: "Java Backend Developer"
     },

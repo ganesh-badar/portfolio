@@ -97,8 +97,8 @@ Returns the complete resume data as structured JSON.
     "name": "Ganesh Badar",
     "phone": "+91-9022201351",
     "email": "ganeshbadar01@gmail.com",
-    "linkedin": "https://linkedin.com/in/ganeshbadar",
-    "github": "https://github.com/ganeshbadar",
+    "linkedin": "https://www.linkedin.com/in/ganesh-badar2004",
+    "github": "https://github.com/ganesh-badar/",
     "location": "Pune, Maharashtra",
     "title": "Java Backend Developer"
   },
@@ -186,8 +186,8 @@ java -jar target/portfolio-1.0.0.jar
       <strong>Ganesh Badar</strong><br/>
       Java Backend Developer<br/><br/>
       <a href="mailto:ganeshbadar01@gmail.com">📧 Email</a> · 
-      <a href="https://linkedin.com/in/ganeshbadar">🔗 LinkedIn</a> · 
-      <a href="https://github.com/ganesh-badar">💻 GitHub</a>
+      <a href="https://www.linkedin.com/in/ganesh-badar2004">🔗 LinkedIn</a> · 
+      <a href="https://github.com/ganesh-badar/">💻 GitHub</a>
     </td>
   </tr>
 </table>

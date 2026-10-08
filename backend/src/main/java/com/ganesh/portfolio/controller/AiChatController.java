@@ -92,8 +92,8 @@ public class AiChatController {
             return "📬 **Contact Information:**\n\n" +
                     "📱 Phone: +91-9022201351\n" +
                     "📧 Email: ganeshbadar01@gmail.com\n" +
-                    "🔗 LinkedIn: linkedin.com/in/ganeshbadar\n" +
-                    "💻 GitHub: github.com/ganeshbadar\n" +
+                    "🔗 LinkedIn: https://www.linkedin.com/in/ganesh-badar2004\n" +
+                    "💻 GitHub: https://github.com/ganesh-badar/\n" +
                     "📍 Location: Pune, Maharashtra\n\n" +
                     "Feel free to reach out — Ganesh is open to opportunities!";
         }

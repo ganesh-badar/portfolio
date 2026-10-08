@@ -18,8 +18,8 @@ public class ResumeService {
         info.setName("Ganesh Badar");
         info.setPhone("+91-9022201351");
         info.setEmail("ganeshbadar01@gmail.com");
-        info.setLinkedin("https://linkedin.com/in/ganeshbadar");
-        info.setGithub("https://github.com/ganeshbadar");
+        info.setLinkedin("https://www.linkedin.com/in/ganesh-badar2004");
+        info.setGithub("https://github.com/ganesh-badar/");
         info.setLocation("Pune, Maharashtra");
         info.setTitle("Java Backend Developer");
         resume.setPersonalInfo(info);
@@ -205,7 +205,7 @@ public class ResumeService {
 
                 Key Strengths: Strong communication, analytical mindset, quick learner, team player
 
-                Contact: +91-9022201351, ganeshbadar01@gmail.com
+                Contact: +91-9022201351, ganeshbadar01@gmail.com, LinkedIn: https://www.linkedin.com/in/ganesh-badar2004, GitHub: https://github.com/ganesh-badar/
                 """;
     }
 }
