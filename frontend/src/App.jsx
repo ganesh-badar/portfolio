@@ -917,14 +917,14 @@ function PrivacyPolicyPage({ onBack }) {
         <div className="legal-document">
           <h1 className="legal-title">Privacy Policy</h1>
           <div className="legal-effective-date">
-            Effective Date: January 1, 2026 • Domain: ganeshbadar.dev
+            Effective Date: January 1, 2026 • Host: ganesh-badar.github.io/portfolio
           </div>
 
           <div className="legal-section">
             <h2 className="legal-heading">1. Introduction & Overview</h2>
             <p className="legal-text">
               This Privacy Policy applies to the personal developer portfolio hosted at{' '}
-              <strong>https://ganeshbadar.dev</strong> (and associated mirrors). This portfolio exists solely to showcase software architecture projects, technical credentials, and professional contact details of Ganesh Badar.
+              <strong>https://ganesh-badar.github.io/portfolio/</strong>. This portfolio exists solely to showcase software architecture projects, technical credentials, and professional contact details of Ganesh Badar.
             </p>
           </div>
 
@@ -988,13 +988,13 @@ function TermsPage({ onBack }) {
         <div className="legal-document">
           <h1 className="legal-title">Terms and Conditions</h1>
           <div className="legal-effective-date">
-            Effective Date: January 1, 2026 • Domain: ganeshbadar.dev
+            Effective Date: January 1, 2026 • Host: ganesh-badar.github.io/portfolio
           </div>
 
           <div className="legal-section">
             <h2 className="legal-heading">1. Acceptance of Terms</h2>
             <p className="legal-text">
-              By accessing and reviewing the portfolio at <strong>https://ganeshbadar.dev</strong>, you agree to comply with and be bound by these Terms and Conditions. If you do not agree, please discontinue using this site.
+              By accessing and reviewing the portfolio at <strong>https://ganesh-badar.github.io/portfolio/</strong>, you agree to comply with and be bound by these Terms and Conditions. If you do not agree, please discontinue using this site.
             </p>
           </div>
 
@@ -1042,7 +1042,7 @@ function Footer({ onViewChange }) {
         <div className="footer-layout">
           <div>
             <div className="footer-brand">
-              ganeshbadar<span>.dev</span>
+              GB<span>.dev</span>
             </div>
             <div style={{ fontSize: '0.82rem', color: 'var(--text-tertiary)', marginTop: '0.25rem' }}>
               Java Backend Developer & Distributed Systems Engineer
@@ -1075,7 +1075,7 @@ function Footer({ onViewChange }) {
         <div className="footer-bottom">
           <div>© {new Date().getFullYear()} Ganesh Badar. All rights reserved.</div>
           <div>
-            Verified Custom Domain: <span className="footer-domain">ganeshbadar.dev</span>
+            Deployed on GitHub Pages: <a href="https://ganesh-badar.github.io/portfolio/" target="_blank" rel="noopener noreferrer" className="footer-domain">ganesh-badar.github.io/portfolio</a>
           </div>
         </div>
       </div>
