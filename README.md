@@ -1,4 +1,4 @@
-# ⚡ Ganesh Badar &mdash; Full-Stack Career Portfolio &amp; AI Chat Platform
+# Ganesh Badar — Java Backend Developer & Systems Architecture Portfolio
 
 [![Java](https://img.shields.io/badge/Java-17%2B-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.oracle.com/java/)
 [![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.4.1-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot)
@@ -6,11 +6,12 @@
 [![React](https://img.shields.io/badge/React-18%2F19-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
 [![Vite](https://img.shields.io/badge/Vite-8.x-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
 [![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
-[![Live Portfolio](https://img.shields.io/badge/Live_Portfolio-GitHub_Pages-2ea44f?style=for-the-badge&logo=github)](https://ganesh-badar.github.io/portfolio/)
+[![Custom Domain](https://img.shields.io/badge/Domain-ganeshbadar.dev-2563eb?style=for-the-badge)](https://ganeshbadar.dev)
 
-A modern, full-stack personal developer portfolio and interactive AI assistant platform built by **Ganesh Badar**.
+A modern, full-stack personal developer portfolio engineered by **Ganesh Badar**.
 
-🌐 **Live Portfolio:** [https://ganesh-badar.github.io/portfolio/](https://ganesh-badar.github.io/portfolio/)
+🌐 **Primary Custom Domain:** [https://ganeshbadar.dev](https://ganeshbadar.dev)  
+🔗 **Mirror / GitHub Pages:** [https://ganesh-badar.github.io/portfolio/](https://ganesh-badar.github.io/portfolio/)
 
 ### 🚀 Featured Flagship Projects Showcased
 - **NexusTech — Full-Stack Enterprise E-Commerce Platform**
@@ -20,7 +21,7 @@ A modern, full-stack personal developer portfolio and interactive AI assistant p
   - [Live Demo](https://ganesh-badar.github.io/ai-resume-screener-ats/) | [GitHub Repository](https://github.com/ganesh-badar/ai-resume-screener-ats)
   - Java 17, Spring Boot 3, React 18, MySQL, Server-Sent Events (SSE), OpenAI GPT-4o-mini, AWS S3
 
-Combines a **Spring Boot 3** REST API backend delivering resume data and an AI-powered conversational assistant with a high-performance **React + Vite** frontend featuring glassmorphism design, animated skill bars, dynamic project showcases, and responsive layouts.
+Combines a **Spring Boot 3** REST API backend delivering verified resume models and an intelligent query terminal with a high-performance **React + Vite** frontend featuring clean architectural typography, zero-lag micro-interactions, responsive grids, and dedicated legal compliance pages.
 
 ---
 
