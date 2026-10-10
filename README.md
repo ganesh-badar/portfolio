@@ -6,12 +6,12 @@
 [![React](https://img.shields.io/badge/React-18%2F19-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
 [![Vite](https://img.shields.io/badge/Vite-8.x-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
 [![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
-[![Custom Domain](https://img.shields.io/badge/Domain-ganeshbadar.dev-2563eb?style=for-the-badge)](https://ganeshbadar.dev)
+[![Live Portfolio](https://img.shields.io/badge/Live_Portfolio-GitHub_Pages-2ea44f?style=for-the-badge&logo=github)](https://ganesh-badar.github.io/portfolio/)
 
-A modern, full-stack personal developer portfolio engineered by **Ganesh Badar**.
+A modern, full-stack personal developer portfolio and systems engineering showcase built by **Ganesh Badar**.
 
-🌐 **Primary Custom Domain:** [https://ganeshbadar.dev](https://ganeshbadar.dev)  
-🔗 **Mirror / GitHub Pages:** [https://ganesh-badar.github.io/portfolio/](https://ganesh-badar.github.io/portfolio/)
+🌐 **Live Deployment on GitHub Pages:** [https://ganesh-badar.github.io/portfolio/](https://ganesh-badar.github.io/portfolio/)  
+📖 **Deployment & Operations Guide:** [DEPLOYMENT_GUIDE.md](file:///c:/Users/ganes/OneDrive/Desktop/Anti_Workspace/portfolio/DEPLOYMENT_GUIDE.md)
 
 ### 🚀 Featured Flagship Projects Showcased
 - **NexusTech — Full-Stack Enterprise E-Commerce Platform**
@@ -31,9 +31,10 @@ Combines a **Spring Boot 3** REST API backend delivering verified resume models 
 graph TD
     subgraph Client ["Frontend (React 19 + Vite 8)"]
         UI_Hero["Hero & Bio Section"]
-        UI_Skills["Animated Skill Matrix"]
-        UI_Projects["Interactive Project Cards"]
-        UI_Chat["Live AI Portfolio Chatbot"]
+        UI_Skills["Technical Competencies Matrix"]
+        UI_Projects["Flagship Project Showcases"]
+        UI_Console["Developer Profile Terminal"]
+        UI_Legal["Privacy Policy & Terms Pages"]
         Client_API["API Fetch Client"]
     end
 
@@ -48,7 +49,7 @@ graph TD
     UI_Hero --> Client_API
     UI_Skills --> Client_API
     UI_Projects --> Client_API
-    UI_Chat --> Client_API
+    UI_Console --> Client_API
 
     Client_API -->|GET /api/resume| Ctrl_Resume
     Client_API -->|POST /api/chat| Ctrl_Chat
@@ -62,11 +63,11 @@ graph TD
 ## ✨ Key Features & Capabilities
 
 ### 🎨 Frontend Highlights
-- **Glassmorphism UI:** Frosted glass cards with backdrop blur, subtle glows, and responsive grid layouts.
-- **Dynamic Content Ingestion:** Fetches real-time portfolio metrics, education, and project stats from the Spring Boot API with fallback resilience.
-- **Interactive AI Chatbot:** Floating conversational assistant answering recruiter queries about skills, projects, and contact info in real time.
-- **Animated Skill Matrix:** Visual progress bars categorized across Languages, Frameworks, Databases, and Tools.
-- **Optimized Bundle:** Sub-second hot-module reloading powered by Vite 8.
+- **Architectural UI:** Crisp obsidian theme (`#09090b` / `#18181b`), hairline borders (`#27272a`), zero purple gradients, zero pill buttons, and high-contrast typography.
+- **Pure Vector SVG Iconography:** 100% minimalist SVG vector stroke icons replacing all emojis.
+- **Legal Compliance Pages:** Fully standalone, dedicated **Privacy Policy** and **Terms and Conditions** pages with hash routing and instant return navigation.
+- **Developer Profile Terminal:** Clean, high-performance query terminal trained on Ganesh's background and project architecture.
+- **Sub-Second Hot-Reloading:** Optimized production bundling powered by Vite 8.
 
 ### ⚙️ Backend Highlights
 - **Layered Clean Architecture:** Strict separation of concerns (Controller &rarr; Service &rarr; Model).
@@ -81,6 +82,7 @@ graph TD
 
 ```text
 portfolio/
+├── DEPLOYMENT_GUIDE.md                  # Comprehensive GitHub Pages deployment guide
 ├── backend/                             # Spring Boot REST API
 │   ├── src/main/java/com/ganesh/portfolio/
 │   │   ├── config/WebConfig.java        # CORS Configuration
@@ -95,14 +97,14 @@ portfolio/
 │   └── pom.xml                          # Maven build configuration
 │
 └── frontend/                            # React 18/19 + Vite Client
-    ├── public/                          # Static assets (favicons, profile avatar)
+    ├── public/                          # Static assets (custom SVG favicon, profile photo)
     ├── src/
     │   ├── assets/                      # Graphic assets
-    │   ├── App.jsx                      # Main portfolio application & chat widget
-    │   ├── index.css                    # Glassmorphism styling & animations
+    │   ├── App.jsx                      # Main portfolio application, terminal & legal views
+    │   ├── index.css                    # Architectural CSS design system
     │   └── main.jsx                     # React root bootstrap
-    ├── index.html                       # HTML5 entry with Google Fonts
-    ├── vite.config.js                   # Vite configuration
+    ├── index.html                       # HTML5 entry with canonical tags & metadata
+    ├── vite.config.js                   # Vite configuration (base: '/portfolio/')
     └── package.json                     # Dependencies & scripts
 ```
 
