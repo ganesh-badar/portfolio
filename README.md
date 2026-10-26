@@ -19,11 +19,11 @@
 
 ## 🚀 Featured Flagship Projects
 
-### 1. 🛒 [Amazon Homepage Clone UI](https://ganesh-badar.github.io/amazon-clone-ui/)
-- **Tech Stack:** HTML5, CSS3, Vanilla JavaScript (ES6+), LocalStorage
-- **Live Demo:** [https://ganesh-badar.github.io/amazon-clone-ui/](https://ganesh-badar.github.io/amazon-clone-ui/)
-- **Source Code:** [github.com/ganesh-badar/amazon-clone-ui](https://github.com/ganesh-badar/amazon-clone-ui)
-- **Features:** Real-time debounced search, department filtering, slide-out shopping cart drawer with local storage persistence, Amazon-style sliding category drawer, and decoupled CMS data schema (`CATALOG_DATA`).
+### 1. 🏢 [Enterprise Employee Leave Management System (ELMS)](https://github.com/ganesh-badar/employee-leave-management-system)
+- **Tech Stack:** Java 17+, Jakarta EE, Servlets, JSP, JDBC, HikariCP, MySQL 8, jBCrypt
+- **Architecture & Docs:** [github.com/ganesh-badar/employee-leave-management-system](https://github.com/ganesh-badar/employee-leave-management-system)
+- **Source Code:** [github.com/ganesh-badar/employee-leave-management-system](https://github.com/ganesh-badar/employee-leave-management-system)
+- **Features:** Role-based security guards (ADMIN vs EMPLOYEE), parameterized SQL transactions, HikariCP connection pooling, jBCrypt password hashing, and embedded Tomcat 10 container.
 
 ### 2. ⚡ [Nexus E-Commerce Platform](https://ganesh-badar.github.io/nexus-ecommerce-platform/)
 - **Tech Stack:** HTML5, CSS3, JavaScript
